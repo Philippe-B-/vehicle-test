@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Vehicle creation</h1>
+
+    {{ form_start(form) }}
+    <div id="appbundle_vehicle" class="container">
+        <div class="row">
+            <div class="col-1">{{ form_label(form.name) }}</div>
+            <div class="col-5">{{ form_widget(form.name) }}</div>
+        </div>
+        {% if form.gas is defined %}
+            <div class="col-1">{{ form_label(form.gas) }}</div>
+            <div class="col-5">{{ form_widget(form.gas) }}</div>
+        {% endif %}
+        <input type="submit" value="Create" />
+    </div>
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('vehicle_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('bundles/app/js/formModification.js') }}"></script>
+{% endblock %}

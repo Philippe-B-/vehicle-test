@@ -1,0 +1,18 @@
+AppBundle\Entity\Vehicle:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\VehicleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        gas:
+            type: float
+            nullable: true
+    lifecycleCallbacks: {  }
