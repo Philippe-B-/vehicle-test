@@ -38,7 +38,6 @@ class VehicleType extends AbstractType
                     $form->add('gas');
                 } else {
                     $form->remove('gas');
-                    $vehicle->setGas(null);
                 }
             }
         );
@@ -50,7 +49,6 @@ class VehicleType extends AbstractType
 
                 // It's important here to fetch $event->getForm()->getData(), as
                 // $event->getData() will get you the client data (that is, the ID)
-                $vehicle = $event->getForm()->getParent()->getData();
                 $vehicleName = $form->getData();
 
                 if (in_array($vehicleName, array('Car', 'Truck')))
