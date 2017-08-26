@@ -80,5 +80,14 @@ class Vehicle
     {
         return $this->gas;
     }
+
+    /**
+     * Checks that a bicycle has no gas value
+     */
+    public function checkBicycleNoGas()
+    {
+        if ($this->name == "Bicycle")
+            $this->setGas(null);
+    }
 }
 

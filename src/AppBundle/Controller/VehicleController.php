@@ -93,7 +93,7 @@ class VehicleController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('vehicle_edit', array('id' => $vehicle->getId()));
+            return $this->redirectToRoute('vehicle_show', array('id' => $vehicle->getId()));
         }
 
         return $this->render('@App/vehicle/edit.html.twig', array(

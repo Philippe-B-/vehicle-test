@@ -15,4 +15,6 @@ AppBundle\Entity\Vehicle:
         gas:
             type: float
             nullable: true
-    lifecycleCallbacks: {  }
+    lifecycleCallbacks:
+        prePersist: [checkBicycleNoGas]
+        preUpdate: [checkBicycleNoGas]

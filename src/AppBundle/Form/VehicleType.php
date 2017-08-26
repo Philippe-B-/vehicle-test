@@ -2,9 +2,7 @@
 
 namespace AppBundle\Form;
 
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
@@ -60,7 +58,6 @@ class VehicleType extends AbstractType
                     $form->getParent()->add('gas');
                 } else {
                     $form->getParent()->remove('gas');
-                    $vehicle->setGas(null);
                 }
             }
         );
