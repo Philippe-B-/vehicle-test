@@ -1,7 +1,7 @@
 Vehicle-test
 ============
 
-####A Symfony project made to test dynamical form modification.
+<h4>A Symfony project made to test dynamical form modification.</h4>
 
 A simple Vehicle entity has two fields : name and gas.<br>
 The name field has three values (stored in parameters) : Car, Truck and Bicycle.<br>
